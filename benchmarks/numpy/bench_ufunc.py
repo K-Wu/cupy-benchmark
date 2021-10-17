@@ -1,4 +1,4 @@
-from __future__ import absolute_import, division, print_function
+
 
 from .common import Benchmark, get_squares_
 
@@ -50,7 +50,7 @@ class UFunc(Benchmark):
         except AttributeError:
             raise NotImplementedError()
         self.args = []
-        for t, a in get_squares_().items():
+        for t, a in list(get_squares_().items()):
             arg = (a,) * self.f.nin
             try:
                 self.f(*arg)

@@ -12,6 +12,9 @@
     // The URL or local path of the source code repository for the
     // project being benchmarked
     "repo": "https://github.com/cupy/cupy.git",
+    //"install_command": ["/usr/bin/which python"],//["source /home/kwu/.bashrc","conda activate numba"],
+    //"uninstall_command": [],
+    //"build_command": [],
 
     // List of branches to benchmark. If not provided, defaults to "master"
     // (for git) or "default" (for mercurial).
@@ -29,7 +32,7 @@
     // If missing or the empty string, the tool will be automatically
     // determined by looking for tools on the PATH environment
     // variable.
-    "environment_type": "virtualenv",
+    "environment_type": "",
 
     // timeout in seconds for installing any dependencies in environment
     // defaults to 10 min

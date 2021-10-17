@@ -1,4 +1,4 @@
-from __future__ import absolute_import, division, print_function
+
 
 from .common import Benchmark
 
@@ -10,7 +10,7 @@ from benchmarks.utils import sync
 @sync
 class MA(Benchmark):
     def setup(self):
-        self.l100 = range(100)
+        self.l100 = list(range(100))
         self.t100 = ([True] * 100)
 
     def time_masked_array(self):

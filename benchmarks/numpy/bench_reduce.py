@@ -1,4 +1,4 @@
-from __future__ import absolute_import, division, print_function
+
 
 from .common import Benchmark, TYPES1, get_squares
 
@@ -10,7 +10,7 @@ from benchmarks.utils import sync
 @sync
 class AddReduce(Benchmark):
     def setup(self):
-        self.squares = get_squares().values()
+        self.squares = list(get_squares().values())
 
     def time_axis_0(self):
         [np.add.reduce(a, axis=0) for a in self.squares]

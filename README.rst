@@ -62,3 +62,12 @@ Some other tiny modifications (remove unsupported dtypes etc.) are also applied 
 
 Benchmarks for features implemented in NumPy but not in CuPy are left intentionally.
 It is an expected behavior to see such error (e.g., ``AttributeError: module 'cupy' has no attribute 'tril'``) during benchmark.
+
+# Issue fixes
+The original repo: https://github.com/cupy/cupy-benchmark.
+
+Used 2to3 to enable python3 execution.
+
+Please check https://github.com/cupy/cupy/issues/4850 on how to enable cupy.cudnn.
+
+Please use `asv run --step 1 master --launch-method spawn` to fix cupy initiation error. For more information, check https://github.com/explosion/spaCy/issues/5507.

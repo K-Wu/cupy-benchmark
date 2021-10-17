@@ -1,4 +1,4 @@
-from __future__ import absolute_import, division, print_function
+
 
 from .common import Benchmark
 
@@ -11,8 +11,8 @@ from benchmarks.utils import sync
 @sync
 class Core(Benchmark):
     def setup(self):
-        self.l100 = range(100)
-        self.l50 = range(50)
+        self.l100 = list(range(100))
+        self.l50 = list(range(50))
         self.l = [np.arange(1000), np.arange(1000)]
         self.l10x10 = np.ones((10, 10))
 

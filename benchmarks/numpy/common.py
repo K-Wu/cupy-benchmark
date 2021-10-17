@@ -1,4 +1,4 @@
-from __future__ import absolute_import, division, print_function
+
 
 import cupy as numpy
 import random
@@ -56,7 +56,7 @@ def get_squares():
 
     # adjust complex ones to have non-degenerated imagery part -- use
     # original data transposed for that
-    for t, v in squares.items():
+    for t, v in list(squares.items()):
         if t.startswith('complex'):
             v += v.T*1j
     return squares
@@ -65,14 +65,14 @@ def get_squares():
 @memoize
 def get_squares_():
     # smaller squares
-    squares_ = {t: s[:nxs, :nys] for t, s in get_squares().items()}
+    squares_ = {t: s[:nxs, :nys] for t, s in list(get_squares().items())}
     return squares_
 
 
 @memoize
 def get_vectors():
     # vectors
-    vectors = {t: s[0] for t, s in get_squares().items()}
+    vectors = {t: s[0] for t, s in list(get_squares().items())}
     return vectors
 
 

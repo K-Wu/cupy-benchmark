@@ -5,3 +5,9 @@ env/
 .asv-machine.json
 *.pyc
 *.pyo
+__pycache__/
+*.bak
+*.qdrep
+*.sqlite
+NVTX/
+run_benchmark.py/
