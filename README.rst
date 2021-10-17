@@ -68,6 +68,6 @@ The original repo: https://github.com/cupy/cupy-benchmark.
 
 Used 2to3 to enable python3 execution.
 
-Please check https://github.com/cupy/cupy/issues/4850 on how to enable cupy.cudnn.
+Please check https://github.com/cupy/cupy/issues/4850 on how to enable cupy.cudnn. e.g., `(numba) kwu@kwu-csl227-99-CEntosREfugee:~/anaconda3/envs/numba/lib/python3.9/site-packages$ python -m  cupyx.tools.install_library --library cutensor --cuda 11.4`
 
 Please use `asv run --step 1 master --launch-method spawn` to fix cupy initiation error. For more information, check https://github.com/explosion/spaCy/issues/5507.
